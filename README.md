@@ -1,2 +1,2 @@
 # CS6533
-Interactive Computer Graphics CS6533 (Prof. Ivan Safrin)
+Interactive Computer Graphics (Prof. Ivan Safrin)
