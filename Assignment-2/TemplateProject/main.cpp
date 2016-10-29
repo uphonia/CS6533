@@ -193,18 +193,18 @@ void init() {
     cube1.geometry.vertexBO = vbLen1;
     cube1.geometry.numIndices = iblen1;
     
-    std::vector<VertexPN> vtxS(vbLen1);
-    std::vector<unsigned short> idxS(iblen1);
+    std::vector<VertexPN> vtx1(vbLen1);
+    std::vector<unsigned short> idx1(iblen1);
     
-    makeCube(0.7, vtxS.begin(), idxS.begin());
+    makeCube(0.7, vtx1.begin(), idx1.begin());
     
     glGenBuffers(1, &cube1.geometry.vertexBO);
     glBindBuffer(GL_ARRAY_BUFFER, cube1.geometry.vertexBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexPN) * vtxS.size(), vtxS.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexPN) * vtx1.size(), vtx1.data(), GL_STATIC_DRAW);
     
     glGenBuffers(1, &cube1.geometry.indexBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, cube1.geometry.indexBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * idxS.size(), idxS.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * idx1.size(), idx1.data(), GL_STATIC_DRAW);
     
     // Cube 2
     getCubeVbIbLen(vbLen2, iblen2);
@@ -212,17 +212,17 @@ void init() {
     cube2.geometry.vertexBO = vbLen2;
     cube2.geometry.numIndices = iblen2;
     
-    std::vector<VertexPN> vtxM(vbLen2);
-    std::vector<unsigned short> idxM(iblen2);
+    std::vector<VertexPN> vtx2(vbLen2);
+    std::vector<unsigned short> idx2(iblen2);
     
-    makeCube(1.6, vtxM.begin(), idxM.begin());
+    makeCube(1.6, vtx2.begin(), idx2.begin());
     
     glGenBuffers(1, &cube2.geometry.vertexBO);
     glBindBuffer(GL_ARRAY_BUFFER, cube2.geometry.vertexBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexPN) * vtxM.size(), vtxM.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexPN) * vtx2.size(), vtx2.data(), GL_STATIC_DRAW);
     glGenBuffers(1, &cube2.geometry.indexBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, cube2.geometry.indexBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * idxM.size(), idxM.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * idx2.size(), idx2.data(), GL_STATIC_DRAW);
     
     // Cube 3
     getCubeVbIbLen(vbLen3, iblen3);
@@ -230,18 +230,18 @@ void init() {
     cube3.geometry.vertexBO = vbLen3;
     cube3.geometry.numIndices = iblen3;
     
-    std::vector<VertexPN> vtxL(vbLen3);
-    std::vector<unsigned short> idxL(iblen3);
+    std::vector<VertexPN> vtx3(vbLen3);
+    std::vector<unsigned short> idx3(iblen3);
     
-    makeCube(2.3, vtxL.begin(), idxL.begin());
+    makeCube(2.3, vtx3.begin(), idx3.begin());
     
     glGenBuffers(1, &cube3.geometry.vertexBO);
     glBindBuffer(GL_ARRAY_BUFFER, cube3.geometry.vertexBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexPN) * vtxL.size(), vtxL.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexPN) * vtx3.size(), vtx3.data(), GL_STATIC_DRAW);
     
     glGenBuffers(1, &cube3.geometry.indexBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, cube3.geometry.indexBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * idxL.size(), idxL.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * idx3.size(), idx3.data(), GL_STATIC_DRAW);
     
     glGenBuffers(1, &normalVBO);
     glBindBuffer(GL_ARRAY_BUFFER, normalVBO);
